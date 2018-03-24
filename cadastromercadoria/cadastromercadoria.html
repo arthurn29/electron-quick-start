@@ -1,0 +1,96 @@
+<link rel="stylesheet" href="../cadastromercadoria/cadastromercadoria.css"/>
+<div class="container-fluid none" id="container-cadastro-mercadoria">
+  <div class="row">
+    <div class="col-md-10 offset-md-1">
+
+      <div class="row">
+
+        <div class="col-md-12 titulo">
+          <h1 class="text-center">
+            Cadastro de Mercadorias
+          </h1>
+        </div>
+
+      </div>
+      <div class="row none" id="rowError">
+        <div class="col-md-12">
+            <div class="alert alert-danger" role="alert" id="divError">
+            </div>
+        </div>
+      </div>
+
+      <div class="row barra-status">
+        <div class="col-md-6 offset-md-3 procurar">
+          <div class="form-group">
+            <!-- <label for="txtPesquisa">Procurar:</label> -->
+            <input type="text" class="form-control" id="txtPesquisaMercadoria" onkeyup="onPesquisaMercadoria()" placeholder="Pesquisa">
+            </div>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="col-md-12">
+          <form>
+            <input type="hidden" id="txtIdMercadoria" value="0">
+            <div class="form-group">
+              <label for="txtMercadoria">Mercadoria:</label>
+              <input type="text" class="form-control" id="txtMercadoria"placeholder="Entre com a Mercadoria">
+            </div>
+            <div class="form-group">
+              <label for="txtValor">Valor Unitário:</label>
+              <div class="row">
+                <div class="col-md-1 rcifrao"> R$: </div> 
+                <div class="col-md-4">
+                  <input type="text" class="form-control valor" id="txtValor"placeholder="Entre o valor da mercadoria" onkeyup="validaValorMercadoria()">
+                </div>
+                <div class="col-md-2 alert alert-danger none" role="alert" id="divValidaValorMercadoria">
+                  Valor Errado
+                </div>
+              </div>
+            </div>
+
+            <div class="row barra-status">
+              <div class="col-md-2 text center">
+                <div class="row">
+                  <div class="col-md-2" id="txtIndiceMercadoria">1</div>
+                  <div class="col-md-2" > de </div>
+                  <div class="col-md-2" id="txtCountMercadoria">100</div>
+                </div>
+              </div>
+              
+              <div class="col-md-8 text-center">
+                <button type="button" class="btn btn-primary text-center" onclick = "onFirstMercadoria()">
+                  <<
+                </button>
+                <button type="button" class="btn btn-primary text-center" onclick = "onBackMercadoria()">
+                  <
+                </button>
+                <button type="button" class="btn btn-success text-center" onclick = "onSaveMercadoria()">
+                  Salvar
+                </button>
+                <button type="button" class="btn btn-secondary text-center" onclick = "onNewMercadoria()">
+                  Novo
+                </button>
+                <button type="button" class="btn btn-dark text-center" onclick = "onCloseMercadoria()">
+                    Sair
+                  </button>
+                <button type="button" class="btn btn-danger text-center" onclick = "onDeleteMercadoria()">
+                  Deletar
+                </button>
+                <button type="button" class="btn btn-primary text-center" onclick = "onNextMercadoria()">
+                  >
+                </button>
+                <button type="button" class="btn btn-primary text-center" onclick = "onLastMercadoria()">
+                  >>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>

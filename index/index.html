@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Móveis Arthur: Conforto, Requinte e Qualidade </title>
+    <script src = "../w3schools.include.js" ></script>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="index.css"/>
+  </head>
+  <body onload="onChargeCliente(); onChargeMercadoria();">
+    <div class="container-fluid" id="container-index">
+      <div class="row">
+        <div class="col-md-10 offset-md-1">
+
+          <div class="row">
+
+            <div class="col-md-12 titulo">
+              <h1 class="text-center">
+                Pedidos Móveis Arthur
+              </h1>
+            </div>
+
+          </div>
+
+          <div class="row row-index">
+
+            <div class="col-md-12">
+              <button type="button" class="btn btn-primary button button-index" onclick = "btnCadastroClientes()">
+                Cadastro de Clientes
+              </button>
+            </div>
+
+          </div>
+
+          <div class="row row-index">
+
+            <div class="col-md-12">
+              <button type="button" class="btn btn-primary button button-index" onclick = "btnCadastroMercadorias()">
+                Cadastro de Mercadorias
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div w3-include-html="../cadastrocliente/cadastrocliente.html"></div>
+    <div w3-include-html="../cadastromercadoria/cadastromercadoria.html"></div>
+    <script>
+      w3.includeHTML();
+    </script>
+    <script src = "../bootstrap/js/bootstrap.min.js" ></script>
+    <script src = "index.js" ></script>
+
+    <script src = "../cadastrocliente/cadastrocliente.js" > </script>
+
+    <script src = "../cadastromercadoria/cadastromercadoria.js" ></script>
+  </body>
+</html>

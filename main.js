@@ -13,11 +13,12 @@ let mainWindow
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 800, height: 600})
+  mainWindow = new BrowserWindow({width: 1000, height: 600})
+  //mainWindow.setMenu(null);
 
   // and load the index.html of the app.
   mainWindow.loadURL(url.format({
-    pathname: path.join(__dirname, 'index.html'),
+    pathname: path.join(__dirname, './index/index.html'),
     protocol: 'file:',
     slashes: true
   }))
@@ -31,6 +32,21 @@ function createWindow () {
     // in an array if your app supports multi windows, this is the time
     // when you should delete the corresponding element.
     mainWindow = null
+  })
+
+  mainWindow.webContents.on('new-window', (event, url, frameName, disposition, options, additionalFeatures) => {
+    mainWindow.hide()
+    event.preventDefault()
+    Object.assign(options, {
+      width: 1000,
+      height: 600
+    })
+    event.newGuest = new BrowserWindow(options);
+    //event.newGuest.setMenu(null);
+    event.newGuest.loadURL (url);
+    event.newGuest.on ("closed", function (){
+      mainWindow.show()
+    });
   })
 }
 

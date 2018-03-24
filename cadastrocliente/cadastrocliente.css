@@ -1,0 +1,6 @@
+input::-webkit-calendar-picker-indicator {
+    display: none;
+}
+.none{
+    display: none !important;
+}

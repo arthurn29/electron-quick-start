@@ -1,0 +1,101 @@
+<link rel="stylesheet" href="../cadastrocliente/cadastrocliente.css"/>
+<div class="container-fluid none" id="container-cadastro-cliente">
+  <div class="row">
+    <div class="col-md-10 offset-md-1">
+
+      <div class="row">
+
+        <div class="col-md-12 titulo">
+          <h1 class="text-center">
+            Cadastro de Clientes
+          </h1>
+        </div>
+
+      </div>
+      <div class="row none" id="rowError">
+        <div class="col-md-12">
+            <div class="alert alert-danger" role="alert" id="divError">
+            </div>
+        </div>
+      </div>
+
+      <div class="row barra-status">
+        <div class="col-md-6 offset-md-3 procurar">
+          <div class="form-group">
+            <!-- <label for="txtPesquisa">Procurar:</label> -->
+            <input type="text" class="form-control" id="txtPesquisaCliente" onkeyup="onPesquisaCliente()" placeholder="Pesquisa" >
+            </div>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="col-md-12">
+          <form>
+            <input type="hidden" id="txtIdCliente" value="0">
+            <div class="form-group">
+              <label for="txtCliente">Cliente:</label>
+              <input type="text" class="form-control" id="txtCliente" placeholder="Entre com o cliente">
+            </div>
+            <div class="form-group">
+              <label for="txtCidade">Cidade:</label>
+              <input type="text" class="form-control" id="txtCidade" placeholder="Entre com o nome da cidade do cliente">
+            </div>
+            <div class="form-group">
+              <label for="txtTelefones">Telefone(s):</label>
+              <input type="text" class="form-control" id="txtTelefones" placeholder="Entre com o(s) telefone(s) do cliente">
+            </div>
+            <div class="form-group">
+              <label for="txtContato">Contato:</label>
+              <input type="text" class="form-control" id="txtContato" placeholder="Entre com o contato do cliente">
+            </div>
+            <div class="form-group">
+              <label for="txtRepresentante">Representante:</label>
+              <input type="text" class="form-control" id="txtRepresentante" placeholder="Entre com o representante do cliente">
+            </div>
+            <div class="row barra-status">
+              <div class="col-md-2 text center">
+                <div class="row">
+                  <div class="col-md-2" id="txtIndiceCliente">1</div>
+                  <div class="col-md-2" > de </div>
+                  <div class="col-md-2" id="txtCountCliente">100</div>
+                </div>
+              </div>
+              
+              <div class="col-md-8 text-center">
+                <button type="button" class="btn btn-primary text-center" onclick = "onFirstCliente()">
+                  <<
+                </button>
+                <button type="button" class="btn btn-primary text-center" onclick = "onBackCliente()">
+                  <
+                </button>
+                <button type="button" class="btn btn-success text-center" onclick = "onSaveCliente()">
+                  Salvar
+                </button>
+                <button type="button" class="btn btn-secondary text-center" onclick = "onNewCliente()">
+                  Novo
+                </button>
+                <button type="button" class="btn btn-dark text-center" onclick = "onCloseCliente()">
+                    Sair
+                  </button>
+                <button type="button" class="btn btn-danger text-center" onclick = "onDeleteCliente()">
+                  Deletar
+                </button>
+                <button type="button" class="btn btn-primary text-center" onclick = "onNextCliente()">
+                  >
+                </button>
+                <button type="button" class="btn btn-primary text-center" onclick = "onLastCliente()">
+                  >>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src = "../bootstrap/js/bootstrap.min.js" ></script>
